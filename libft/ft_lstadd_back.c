@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 16:32:40 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/28 13:20:47 by eel-garo         ###   ########.fr       */
+/*   Created: 2025/01/31 15:03:29 by eel-garo          #+#    #+#             */
+/*   Updated: 2025/01/31 15:11:17 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
-	if (*lst)
+	if (*lst) //* if we have nodes
 		ft_lstlast(*lst)->next = new;
 	else
-		*lst = new;
+		*lst = new; //* if we don't new is the first node
 }

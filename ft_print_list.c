@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 16:38:29 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/28 13:21:04 by eel-garo         ###   ########.fr       */
+/*   Created: 2025/01/31 20:40:01 by eel-garo          #+#    #+#             */
+/*   Updated: 2025/01/31 20:42:55 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_print_list(t_list *lst)
 {
-	t_list	*ptr;
-
-	if (!lst || !f)
-		return ;
-	ptr = lst;
-	while (ptr != NULL)
+	t_list	*current;
+	
+	current = lst;
+	while (current != NULL)
 	{
-		(*f)(ptr->content);
-		ptr = ptr->next;
+		ft_printf(1, "%d ", current->number);
+		ft_printf(1, "%d\n", current->index);
+		
+		current = current->next;
 	}
 }

@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 16:36:46 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/28 13:20:58 by eel-garo         ###   ########.fr       */
+/*   Created: 2025/01/31 15:31:15 by eel-garo          #+#    #+#             */
+/*   Updated: 2025/01/31 18:28:05 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst)
 {
 	t_list	*node;
-
-	if (!lst || !del)
+	
+	if (!lst)
 		return ;
-	while (*lst != NULL)
+	while (*lst)
 	{
 		node = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = node;
+		ft_lstdelone(*lst);
+		*lst = node;	
 	}
 }

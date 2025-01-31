@@ -6,7 +6,7 @@
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 21:00:29 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/28 21:00:54 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:01:49 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ static void ft_check(char *str)
 	while (str[i])
 	{
 		if (str[i] != ' ')
-			space = 0;
+			space = 0; //* assuming all is spaces
 		if ((str[i] == '+' || str[i] == '-') && !ft_isdigit(str[i + 1]))
+			error = 1; //* if the char is a sign and not followed by a sign
+		else if (i > 0 && (str[i] == '+' || str[i] == '-') && str[i - 1] != ' ')
 			error = 1;
 		if (!ft_isdigit(str[i]) && str[i] != '+' && str[i] != '-' && str[i] != ' ')
-			error = 1;
+			error = 1; //* if neather a digit or a sign
 		i++;
 	}
-	if (error || space)
+	if (error || space) //* if all spaces or error = 1
 	{
 	 	fprintf(stderr, "Error\n");
 		exit(0);
