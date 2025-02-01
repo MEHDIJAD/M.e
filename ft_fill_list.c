@@ -6,7 +6,7 @@
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 16:12:12 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/31 19:03:19 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/02/01 14:06:07 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	ft_fill(char *str, t_list **list)
 			i++;
 	}
 }
-void ft_fill_list(char **vic, t_list **list)
+void ft_fill_stack_a(char **vic, t_list **list)
 {
 	int	i;
 

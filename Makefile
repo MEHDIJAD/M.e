@@ -13,6 +13,13 @@ SRCS   = push_swap.c \
 		 libft/ft_lstdelone.c \
 		 libft/ft_lstclear.c \
 		 libft/ft_lstsize.c \
+		 libft/ft_lstadd_front.c \
+		 ops/ft_op_swap.c \
+		 ops/ft_op_rotate.c \
+		 ops/ft_op_rrotate.c \
+		 ops/ft_op_push.c \
+		 algo/ft_sort_three.c \
+		 algo/ft_sort_five.c \
 
 
 OBJS   = $(SRCS:.c=.o)

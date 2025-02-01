@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_op_push.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/28 13:13:21 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/02/01 19:29:52 by eel-garo         ###   ########.fr       */
+/*   Created: 2025/02/01 15:10:52 by eel-garo          #+#    #+#             */
+/*   Updated: 2025/02/01 15:49:55 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int main(int ac, char *av[])
+void	ft_op_push(t_list **stack_dst, t_list **stack_src)
 {
-	t_list *stack_a;
-	t_list	*stack_b;
+	t_list	*temp;
 	
-	stack_a = NULL;
-	stack_b = NULL;
-	if (ac == 1)
-		return(ft_printf(2,"Error\n"), 1);
-	ft_check_input(av);	
-	ft_fill_stack_a(av, &stack_a);
-	ft_index_stack_a(&stack_a);
-	ft_print_list(stack_a,stack_b, 'A', 'B');
-	ft_sort_list(&stack_a, &stack_b);
-	ft_print_list(stack_a,stack_b, 'A', 'B');
-
-	ft_lstclear(&stack_a);
+	if (!stack_src || !*stack_src)
+		return ;
+	temp = *stack_src; //* get the first node of src
+	*stack_src = (*stack_src)->next; //* update the src
+	temp->next = *stack_dst; //* add the front of dst
+	*stack_dst = temp; //* make temp the new head
 }
-

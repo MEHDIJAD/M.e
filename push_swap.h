@@ -6,7 +6,7 @@
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:11:11 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/31 20:40:49 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/02/01 18:02:51 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,23 @@ typedef struct s_list
 
 //TODO: push_swap Functions
 void 	ft_check_input(char *av[]);
-void 	ft_fill_list(char **vic, t_list **list);
+void	ft_fill_stack_a(char **vic, t_list **list);
 void	ft_check_double(t_list *list);
-void	ft_index_list(t_list **lst);
-void	ft_sort_list(t_list **lst);
-void	ft_print_list(t_list *lst); //* temp function 
+void	ft_index_stack_a(t_list **lst);
+void	ft_sort_list(t_list **stack_a, t_list **stack_b);
+void	ft_print_list(t_list *stack_a, t_list *stack_b, char a, char b); //* temp function 
+
+//* operations
+void	ft_op_swap(t_list **stack);
+void	ft_op_rotate(t_list **stack);
+void	ft_op_rrotate(t_list **stack);
+void	ft_op_push(t_list **stack_dst, t_list **stack_src);
+
+//* algor
+
+void	ft_sort_three(t_list **stack_a);
+
+void	ft_sort_five(t_list **stack_a, t_list **stack_b);
 
 //TODO: thies are the list function from libft
 
@@ -46,5 +58,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst);
 void	ft_lstclear(t_list **lst);
 int		ft_lstsize(t_list *lst);
+void	ft_lstadd_front(t_list **stack, t_list *new);
 
 #endif

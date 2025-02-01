@@ -6,22 +6,20 @@
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 19:29:14 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/01/31 20:19:13 by eel-garo         ###   ########.fr       */
+/*   Updated: 2025/02/01 19:24:20 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort_list(t_list **lst)
+void	ft_sort_list(t_list **stack_a, t_list **stack_b)
 {
-	(void)lst;
-	//int	size;
+	int	size;
 
-	//size = ft_lstsize(*lst);
-	//if (size <= 3)
-	//	ft_easy_algor(*lst);	
+	(void)stack_b;
+	size = ft_lstsize(*stack_a);
+	if (size <= 3)
+		ft_sort_three(stack_a);	
 	//else if (size <= 5)
-	//	ft_medium_algo(*lst);
-	//else if (size <= 100)
-	//	ft_hard_algo(*lst);
+	//	ft_sort_five(stack_a, stack_b);
 }

@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_op_rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-garo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 13:58:39 by eel-garo          #+#    #+#             */
-/*   Updated: 2025/02/01 14:01:19 by eel-garo         ###   ########.fr       */
+/*   Created: 2025/02/01 14:21:54 by eel-garo          #+#    #+#             */
+/*   Updated: 2025/02/01 14:37:20 by eel-garo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_lstadd_front(t_list **stack, t_list *new)
+void	ft_op_rotate(t_list **stack)
 {
-	if (!stack || !new)
+	t_list	*first;
+	t_list	*last;
+	
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	new->next = *stack;
-	*stack = new;
+	first = *stack; //* point to first number 
+	*stack = (*stack)->next; //* move to second number
+	first->next = NULL; //* detach the first node
+	last = *stack; //* point last to the head
+	while (last->next) //* move intel find the last node
+		last = last->next;
+	last->next = first; //* add first to the end of list
+	
 }
