@@ -92,6 +92,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int     ft_check_file_map(char *map_ber);
 void    ft_puterror(int error_code);
 int     ft_playable_map(t_data *data);
+void ft_put_image(t_data *data, int i, int j, char c);
 
 void    ft_init(t_data *data);
 void    *ft_calloc(size_t count, size_t size);

@@ -12,6 +12,11 @@
 
 #include "../so_long.h"
 
+static void ft_update_map(t_data *data, int old_x, int old_y, int new_x, int new_y)
+{
+    ft_put_image(data, old_y, old_x, '0');
+    ft_put_image(data,new_y, new_x, 'P');
+}
 void put_move(t_data *data, int new_y, int new_x, int *movement_count)
 {
     char next_pos = data->ptr[new_y][new_x];
@@ -21,9 +26,7 @@ void put_move(t_data *data, int new_y, int new_x, int *movement_count)
     else if (next_pos == 'E')
     {
         if (data->cl != 0)
-        {
             return;
-        }
         if (data->cl == 0)
         {
            ft_printf(2, "Movements: %d\n", ++(*movement_count));
@@ -32,6 +35,7 @@ void put_move(t_data *data, int new_y, int new_x, int *movement_count)
     }
     if (next_pos != '1')
     {
+        ft_update_map(data, data->x_p, data->y_p, new_x, new_y);
         data->ptr[data->y_p][data->x_p] = '0';
         data->ptr[new_y][new_x] = 'P';
         data->y_p = new_y;
@@ -56,6 +60,5 @@ int ft_first_move(int keycode, t_data *data)
         put_move(data, data->y_p + 1, data->x_p, &movement_count);
     if (keycode == XK_Up)
         put_move(data, data->y_p - 1, data->x_p, &movement_count);
-    ft_drow_map(data);
     return (0);
 }

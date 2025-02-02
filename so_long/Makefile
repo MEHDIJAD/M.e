@@ -12,6 +12,7 @@ SRCS = mand/so_long.c \
 	   mand/ft_cleanup_game.c \
        mand/ft_checking_tools.c \
 	   mand/ft_puterror.c \
+        mand/ft_put_image.c \
 
 BSRCS = bonus/so_long_bonus.c \
         get_next_line/get_next_line.c \
