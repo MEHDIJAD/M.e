@@ -33,7 +33,7 @@ CC 		= cc
 CFLAGS 	= -Wall -Wextra -Werror
 #-fsanitize=address
 
-MLX = -L/home/eel-garo/include/mlx/ -lmlx -lX11 -lXext
+MLX = -L/mnt/c/Users/pro/Desktop/M.e/so_long/mlx/ -lmlx -lX11 -lXext
 
 
 OBJS = $(SRCS:.c=.o)

@@ -23,7 +23,7 @@
 
 # define SIZE_MAX 18446744073709551615ULL
 
-#include "/home/eel-garo/include/mlx/mlx.h" 
+#include "mlx/mlx.h" 
 
 #include <unistd.h>
 #include <stdlib.h>
