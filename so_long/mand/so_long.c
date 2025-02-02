@@ -24,8 +24,8 @@ int main(int ac, char *av[])
     if (!ft_get_map(av[1], &data))
         return (EXIT_FAILURE);
     ft_get_map_dimention(&data);
-    // if (!ft_valid_map(&data))
-    //     return (ft_free_map(data.ptr),EXIT_FAILURE);
+    if (!ft_valid_map(&data))
+        return (ft_free_map(data.ptr),EXIT_FAILURE);
     data.mlx = mlx_init();
     if (!data.mlx)
         return (ft_free_map(data.ptr), EXIT_FAILURE);

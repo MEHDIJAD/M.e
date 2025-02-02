@@ -22,6 +22,7 @@
 # endif
 
 # define SIZE_MAX 18446744073709551615ULL
+# define OPEN_MAX 1024
 
 #include "mlx/mlx.h" 
 
@@ -32,6 +33,7 @@
 #include <fcntl.h>
 #include <X11/keysym.h>
 #include <stdbool.h>
+#include <limits.h>
 #include "ft_printf.h"
 
 typedef struct s_data
@@ -92,10 +94,16 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int     ft_check_file_map(char *map_ber);
 void    ft_puterror(int error_code);
 int     ft_playable_map(t_data *data);
-void ft_put_image(t_data *data, int i, int j, char c);
+void    ft_put_image(t_data *data, int i, int j, char c);
 
 void    ft_init(t_data *data);
 void    *ft_calloc(size_t count, size_t size);
+size_t	ft_strlen(const char *buf);
+char    *ft_strchr(const char *s, int c);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memset(void *b, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+char	*ft_strdup(const char *s1);
 
 
 #endif

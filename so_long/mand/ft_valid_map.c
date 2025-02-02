@@ -67,7 +67,6 @@ int ft_playable_map(t_data *data)
     }
     map_copy[data->x] = NULL;
     ft_get_player_position(data);
-    printf("%d %d", data->x_p, data->y_p);
     int h = ft_flood_fill(map_copy,data->y_p, data->x_p);
 
     if ( h != data->cl + 1)

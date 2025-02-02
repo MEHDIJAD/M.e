@@ -77,43 +77,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
  int ft_check_file_map(char *map_ber)
- {
+{
     if (!ft_strnstr(map_ber, ".ber", strlen(map_ber)))
         return (0);
     return (1);
- }
-
- static void	*ft_memset(void *b, int c, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	ptr = (unsigned char *)b;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
 }
 
-static void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
-}
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	size_t	all;
 
-	if (size && count > SIZE_MAX / size)
-		return (NULL);
-	all = count * size;
-	ptr = (void *)malloc(all);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (all));
-	return (ptr);
-}
+
