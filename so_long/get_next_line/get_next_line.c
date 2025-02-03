@@ -42,10 +42,10 @@ static char *ft_add(char  *map, char  *buffer)
     if (!map && !buffer)
         return (NULL);
     if (!map)
-        return (ft_strdup(buffer));
+        return (ft_strdup(buffer)); //!
     if (!buffer)
-        return (ft_strdup(map));
-    len = ft_strlen(map) + ft_strlen(buffer);
+        return (ft_strdup(map)); //!
+    len = ft_strlen(map) + ft_strlen(buffer); //!
     new_buff = malloc((len + 1) * sizeof(char));
     if (!new_buff)
         return (NULL);
@@ -61,7 +61,8 @@ static char	*ft_process_line(char **map_line) //* takes the stat-variable
 	char		*line;
 	char		*remaining;
 
-	newline_pos = ft_strchr(*map_line, '\n'); //* check again for new line 
+	//!
+	newline_pos = ft_strchr(*map_line, '\n'); //* check again for new line  
 	if (newline_pos) //* if we have new line == newline_pos != NULL
 	{
 		*newline_pos = '\0'; //??

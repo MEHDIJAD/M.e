@@ -24,11 +24,11 @@ void ft_init(t_data *data)
     data->img_widht = 0; 
     data->img_height = 0; 
     data->ptr = NULL ;
-    data->relative_path_hero = "/home/eel-garo/Desktop/M.2/so_long/textures/1.xpm";
-    data->relative_path_wall = "/home/eel-garo/Desktop/M.2/so_long/textures/block.xpm";
-    data->relative_path_collact = "/home/eel-garo/Desktop/M.2/so_long/textures/collectible.xpm";
-    data->relative_path_exit = "/home/eel-garo/Desktop/M.2/so_long/textures/exit.xpm"; 
-    data->relative_path_floor = "/home/eel-garo/Desktop/M.2/so_long/textures/space.xpm"; 
+    data->relative_path_hero = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/1.xpm";
+    data->relative_path_wall = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/block.xpm";
+    data->relative_path_collact = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/collectible.xpm";
+    data->relative_path_exit = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/exit.xpm"; 
+    data->relative_path_floor = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/space.xpm"; 
     data->x_p = 0;
     data->y_p = 0;
     data->cl = 0;
@@ -77,43 +77,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
  int ft_check_file_map(char *map_ber)
- {
+{
     if (!ft_strnstr(map_ber, ".ber", strlen(map_ber)))
         return (0);
     return (1);
- }
-
- static void	*ft_memset(void *b, int c, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	ptr = (unsigned char *)b;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
 }
 
-static void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
-}
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	size_t	all;
 
-	if (size && count > SIZE_MAX / size)
-		return (NULL);
-	all = count * size;
-	ptr = (void *)malloc(all);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (all));
-	return (ptr);
-}
+

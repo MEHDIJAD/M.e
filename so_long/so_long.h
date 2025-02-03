@@ -70,33 +70,34 @@ typedef struct s_param
 } t_param;
 
 char	*get_next_line(int fd);
-char	*ft_strdup(const char *s1);
-size_t	ft_strlen(const char *s);
 
-int ft_get_map(char *str, t_data *data);
-void ft_get_map_dimention(t_data *data);
-int ft_get_img_data(t_data *data);
-void ft_drow_map(t_data *data);
-int ft_first_move(int keycode, t_data *data);
-void ft_get_player_position(t_data *data);
-int ft_valid_map(t_data *data);
-void ft_cleanup_game(t_data *data);
-void ft_free_map(char **ptr);
-int ft_exit(t_data *data);
-
+//*mand
+int		ft_get_map(char *str, t_data *data);
+void	ft_get_map_dimention(t_data *data);
+int		ft_get_img_data(t_data *data);
+void	ft_drow_map(t_data *data);
+int		ft_first_move(int keycode, t_data *data);
+void	ft_get_player_position(t_data *data);
+int		ft_valid_map(t_data *data);
+void	ft_cleanup_game(t_data *data);
+void	ft_free_map(char **ptr);
+int		ft_exit(t_data *data);
 int     ft_surrounded_by_walls_check(t_data *data);
 int     ft_check_components(t_data *data);
 int     small_check(t_data *data);
 int     ft_rectangular_check(t_data *data);
 int     ft_min_components(t_data *data);
-
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int     ft_check_file_map(char *map_ber);
 void    ft_puterror(int error_code);
 int     ft_playable_map(t_data *data);
 void    ft_put_image(t_data *data, int i, int j, char c);
-
 void    ft_init(t_data *data);
+
+//*bonus
+
+
+//* libft
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void    *ft_calloc(size_t count, size_t size);
 size_t	ft_strlen(const char *buf);
 char    *ft_strchr(const char *s, int c);
