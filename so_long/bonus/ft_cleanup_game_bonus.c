@@ -24,6 +24,8 @@ void ft_cleanup_game(t_data *data)
         mlx_destroy_image(data->mlx, data->img_collact);
     if (data->img_exit)
         mlx_destroy_image(data->mlx, data->img_exit);
+    if (data->img_enemy)
+        mlx_destroy_image(data->mlx, data->img_enemy);
     if (data->win)
         mlx_destroy_window(data->mlx, data->win);
     if (data->mlx)

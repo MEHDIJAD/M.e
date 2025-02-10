@@ -14,19 +14,14 @@
 
 void ft_drow_map(t_data *data)
 {
-    int i;
-    int j;
+    int i, j;
 
-    i = 0;
-    while (data->ptr[i])
+    for (i = 0; i < data->x; i++)
     {
-        j = 0;
-        while (data->ptr[i][j])
+        for (j = 0; j < data->y; j++)
         {
-            ft_put_image(data, i, j, data->ptr[i][j]); 
-            j++;
+            ft_put_image(data, i, j, data->ptr[i][j]);
         }
-        i++;
     }
 }
 

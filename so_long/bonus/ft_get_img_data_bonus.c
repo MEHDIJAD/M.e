@@ -34,5 +34,10 @@ int ft_get_img_data(t_data *data)
     data->img_exit = mlx_xpm_file_to_image(data->mlx, data->relative_path_exit, &data->img_widht, &data->img_height);
     if (!data->img_exit)
         return (perror("Failed to load exit image"), ft_exit(data), 0);
+    //!b
+    data->img_enemy = mlx_xpm_file_to_image(data->mlx, data->relative_path_enemy, &data->img_widht, &data->img_height);
+    if (!data->img_enemy)
+        return (perror("Failed to load enemy image"), ft_exit(data), 0);
+    //!
     return (1);
 }

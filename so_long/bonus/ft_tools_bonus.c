@@ -28,7 +28,8 @@ void ft_init(t_data *data)
     data->relative_path_wall = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/block.xpm";
     data->relative_path_collact = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/collectible.xpm";
     data->relative_path_exit = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/exit.xpm"; 
-    data->relative_path_floor = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/space.xpm"; 
+    data->relative_path_floor = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/space.xpm";
+    data->relative_path_enemy = "/mnt/c/Users/pro/Desktop/M.e/so_long/textures/Enemy_3.xpm"; //!b
     data->x_p = 0;
     data->y_p = 0;
     data->cl = 0;
